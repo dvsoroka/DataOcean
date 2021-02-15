@@ -3,13 +3,14 @@ import { Switch, Route } from 'react-router-dom';
 import { ReactRouterPropTypes } from 'utils/prop-types';
 import Route404 from 'components/pages/Route404';
 import DatasetsList from './DatasetsList';
-import KvedList from './kved/KvedList';
+import KvedList from './KvedList';
 import CompanyUkList from './company/CompanyUkList';
 import CompanyUkrList from './company/CompanyUkrList';
 import CompanyList from './company/CompanyList';
 import StreetList from './street/StreetList';
 import FopList from './company/FopList';
 import PepList from './pep/PepList';
+import KoatuuList from './koatuu/KoatuuList';
 
 const DatasetsRoutes = (props) => {
   const { match } = props;
@@ -40,6 +41,11 @@ const DatasetsRoutes = (props) => {
         exact
         path={`${match.path}street/`}
         component={StreetList}
+      />
+      <Route
+        exact
+        path={`${match.path}koatuu/`}
+        component={KoatuuList}
       />
       <Route
         exact
